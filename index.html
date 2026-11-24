@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Expense Tracker</h1>
+
+      <h2>Enter Expense</h2>
+
+      <div class="input-section">
+        <input type="text" id="name" placeholder="Expense name" />
+
+        <input type="number" id="amount" placeholder="Amount" />
+
+        <select id="category">
+          <option value="Mess">Mess</option>
+          <option value="Trips">Travel</option>
+          <option value="Shopping">Shopping</option>
+          <option value="College">Education</option>
+           <option value="Recharge">Recharge</option>
+            <option value="Rent">Rent</option>
+        </select>
+
+        <button onclick="addExpense()">Add Expense</button>
+      </div>
+
+      <h2>Total: ₹<span id="total">0</span></h2>
+
+      <h3>Types Of Expanses</h3>
+
+      <select id="filter" onchange="showExpenses()">
+        <option value="All">All</option>
+        <option value="Mess">Mess</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="College">Education</option>
+        <option value="Recharge">Recharge</option>
+        <option value="Rent">Rent</option>
+      </select>
+
+      <div id="expenseList"></div>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>
+
